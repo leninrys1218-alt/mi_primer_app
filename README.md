@@ -21,8 +21,7 @@ con la versión a mano que ya tenía funcionando y que entiendo por
 completo.
 
 Además noté algo real: mi código a mano da errores que dicen qué campo
-falló (`CampoInvalido: 'consolaId' debe ser un texto no vacío`), mientras
-que freezed generado solo tira el típico error de Dart sin decir cuál
+fallo, mientras que freezed generado solo tira el típico error de Dart sin decir cuál
 campo fue. Para una app donde los datos los llena el dueño del local a
 mano, ese mensaje claro me parece más valioso que ahorrarme código.
 Freezed lo estare probando de manera autonoma despues sin la presion de la entrega.
