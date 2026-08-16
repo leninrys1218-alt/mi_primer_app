@@ -1,0 +1,31 @@
+[
+  {
+    "id": "alq-001",
+    "consolaId": "PS5-01",
+    "tipoConsola": "ps5",
+    "cliente": { "nombre": "Carlos Mendoza", "cedula": "1065234789", "telefono": "3015678901" },
+    "fechaInicio": "2026-08-10T14:00:00Z",
+    "fechaEsperadaDevolucion": "2026-08-13T14:00:00Z",
+    "estado": { "tipo": "entregado", "entregadoEn": "2026-08-10T14:10:00Z", "fianza": 150000 },
+    "notas": "Cliente pidió un control extra"
+  },
+  {
+    "id": "alq-002",
+    "consolaId": "PS5-02",
+    "tipoConsola": "ps5",
+    "cliente": { "nombre": "Laura Pérez", "cedula": "1073456123", "telefono": "3126789012" },
+    "fechaInicio": "2026-08-12T09:00:00Z",
+    "fechaEsperadaDevolucion": "2026-08-14T09:00:00Z",
+    "estado": { "tipo": "reservado", "reservadoEn": "2026-08-11T18:30:00Z" }
+  },
+  {
+    "id": "alq-003",
+    "consolaId": "PS5-01",
+    "tipoConsola": "ps5",
+    "cliente": { "nombre": "Andrés Gómez", "cedula": "1098234567", "telefono": "3007891234" },
+    "fechaInicio": "2026-08-05T15:00:00Z",
+    "fechaEsperadaDevolucion": "2026-08-08T15:00:00Z",
+    "estado": { "tipo": "atrasado", "diasAtraso": 5, "seAviso": true },
+    "notas": null
+  }
+]
