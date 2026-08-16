@@ -1,17 +1,36 @@
-# mi_primer_proyecto_flutter
+# PlayRenta
 
-A new Flutter project.
+Los locales de alquiler de PlayStation aún llevan el control
+de manera manual. PlayRenta centraliza cada préstamo para
+saber, de un vistazo, qué consola está afuera, con quién y desde cuándo.
 
-## Getting Started
+## El dominio
 
-This project is a starting point for a Flutter application.
+- `Alquiler`   — entidad principal. Identidad: `id`.
+- `Cliente`    — objeto de valor (nombre, cédula, teléfono).
+- `EstadoAlquiler` — sellada: Reservado · Entregado · Devuelto · Atrasado · Cancelado.
+- `TipoConsola` — enum, hoy solo `ps5`, pensado para crecer sin romper el resto.
 
-A few resources to get you started if this is your first Flutter project:
+## Decisión: modelo escrito a mano (sin freezed)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Sí intenté usar freezed (paso 11), pero me tropecé con varios errores
+raros: un campo anidado que no se convertía bien a JSON, versiones de
+paquetes que no cuadraban, y una anotación de más que terminó rompiendo
+todo. Después de darle vueltas un rato, decidí no forzarlo y quedarme
+con la versión a mano que ya tenía funcionando y que entiendo por
+completo.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Además noté algo real: mi código a mano da errores que dicen qué campo
+falló (`CampoInvalido: 'consolaId' debe ser un texto no vacío`), mientras
+que freezed generado solo tira el típico error de Dart sin decir cuál
+campo fue. Para una app donde los datos los llena el dueño del local a
+mano, ese mensaje claro me parece más valioso que ahorrarme código.
+Freezed lo estare probando de manera autonoma despues sin la presion de la entrega.
+
+## Cómo correrlo
+
+    flutter pub get
+
+    flutter test
+
+    flutter run
