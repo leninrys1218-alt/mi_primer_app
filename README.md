@@ -22,8 +22,7 @@ completo.
 
 Además noté algo real: mi código a mano da errores que dicen qué campo
 fallo, mientras que freezed generado solo tira el típico error de Dart sin decir cuál
-campo fue. Para una app donde los datos los llena el dueño del local a
-mano, ese mensaje claro me parece más valioso que ahorrarme código.
+campo fue. Para el tipo de app que estoy haciendo, ese mensaje claro me parece más valioso que ahorrarme código.
 Freezed lo estare probando de manera autonoma despues sin la presion de la entrega.
 
 ## Cómo correrlo
